@@ -2,6 +2,13 @@ import pytz, random, string
 from datetime import date 
 from info import API, URL
 from shortzy import Shortzy
+from info import SHORTLINK_URL, SHORTLINK_API
+
+class temp(object):
+    ME = None
+    BOT = None
+    U_NAME = None
+    B_NAME = None
 
 TOKENS = {}
 VERIFIED = {}
