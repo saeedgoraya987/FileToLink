@@ -21,9 +21,8 @@ async def start(client, message):
             InlineKeyboardButton("📢 Updates Channel", url="https://t.me/BackupRedirect")
         ]] 
     )
-    await client.reply_photo(
+    await message.reply_photo(
         photo=image_url,
-        chat_id=message.from_user.id,
         caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
         reply_markup=rm,
         parse_mode=enums.ParseMode.HTML
