@@ -21,17 +21,11 @@ async def start(client, message):
             InlineKeyboardButton("📢 Updates Channel", url="https://t.me/BackupRedirect")
         ]] 
     )
-    await message.reply_photo(
-            photo=image_url,
-            caption=(
-                "Hi👋, I am a **Save Restricted Bot** based on /token. Press for more info.\n\n"
-                "✳️ I can save posts from channels or groups where forwarding is off.\n\n"
-                "⚡ Simply send the post link of a public channel. For private channels, do /login. Send /help to know more. \n\n"
-                "> Must check /terms, /plan & /help"
-                ""
-            ),
-            reply_markup=rm
-)
+    await client.send_message(
+        text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        reply_markup=rm,
+        parse_mode=enums.ParseMode.HTML
+    )
     return
 
 
