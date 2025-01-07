@@ -15,15 +15,14 @@ async def start(client, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
-        image_url = "https://i.postimg.cc/GhQk8Pk8/VKHLLRIUUSFVBQB.jpg"
     rm = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton("📢 Updates Channel", url="https://t.me/BackupRedirect")
         ]] 
     )
-    await client.reply_photo(
+    await client.send_photo(
         chat_id=message.from_user.id,
-        photo=image_url,
+        photo="https://telegra.ph/file/f2c253c5b0b747042cf4c.png",
         caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
         reply_markup=rm,
         parse_mode=enums.ParseMode.HTML
