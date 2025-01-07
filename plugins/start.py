@@ -22,7 +22,7 @@ async def start(client, message):
     )
     await client.send_photo(
         chat_id=message.from_user.id,
-        photo="https://telegra.ph/file/f2c253c5b0b747042cf4c.png",
+        photo="https://i.postimg.cc/zffBrZdd/DUESJWVCEIKCEKI.jpg",
         caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
         reply_markup=rm,
         parse_mode=enums.ParseMode.HTML
@@ -61,11 +61,11 @@ async def stream_start(client, message):
     rm=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("sᴛʀᴇᴀᴍ 🖥", url=stream),
-                InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download)
+                InlineKeyboardButton("Stream 🖥", web_app=stream),
+                InlineKeyboardButton("Download 📥", url=download)
             ]
         ] 
     )
-    msg_text = """<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>\n\n<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>\n\n<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>\n\n<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>\n\n<b> 🖥ᴡᴀᴛᴄʜ  :</b> <i>{}</i>\n\n<b>🚸 Nᴏᴛᴇ : ʟɪɴᴋ ᴡᴏɴ'ᴛ ᴇxᴘɪʀᴇ ᴛɪʟʟ ɪ ᴅᴇʟᴇᴛᴇ</b>"""
+    msg_text = """<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>\n\n<b>📂 File Name:</b> <i>{}</i>\n\n<b>📦 File Size:</b> <i>{}</i>\n\n<b>📥 Download:</b> <i>{}</i>\n\n<b>🖥 Watch:</b> <i>{}</i>\n\n<b>🚸 Note: Link Won't Expire Till i Delete</b>"""
 
     await message.reply_text(text=msg_text.format(get_name(log_msg), humanbytes(get_media_file_size(message)), download, stream), quote=True, disable_web_page_preview=True, reply_markup=rm)
