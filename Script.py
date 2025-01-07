@@ -1,23 +1,19 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
-
 class script(object):
-    START_TXT = """<b>Hello {} 👋, My Name Is <a href=https://t.me/{}>{}</a>
+    START_TXT = """<b>👋 Hey, {}
     
-✏️ I Am A Advance File Stream Bot With Multiple Player Support And Url Shortner. Best Ui Performance.
+This Is A File Streamer Bot
+Send Me File To Generate Its Link
 
-Now Send Me A Media To See Magic ✨</b>"""
+✨ @FileStreamerBot</b>"""
 
-    LOG_TEXT_P = """#NewUser
-ID - <code>{}</code>
-Nᴀᴍᴇ - {}"""
+    LOG_TEXT_P = """#NewUser | @FileStreamerBot
+🆔 User ID: <code>{}</code>
+👤 Username: {}"""
     
     RESTART_TXT = """
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
+<b>Bot Restarted!
 
-📅 Dᴀᴛᴇ : <code>{}</code>
-⏰ Tɪᴍᴇ : <code>{}</code>
-🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
-🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v2.7.1 [ Sᴛᴀʙʟᴇ ]</code></b>"""
+📅 Date: <code>{}</code>
+⏰ Time: <code>{}</code>
+🌐 Timezone : <code>Asia/Kolkata</code>
+🛠️ Build Status: <code>v2.7.1 [ Stable ]</code></b>"""
