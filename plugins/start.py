@@ -22,6 +22,7 @@ async def start(client, message):
         ]] 
     )
     await client.send_message(
+        chat_id=message.from_user.id,
         text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
         reply_markup=rm,
         parse_mode=enums.ParseMode.HTML
