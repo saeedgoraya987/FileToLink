@@ -24,7 +24,7 @@ URL = environ.get("URL", "")
 
 # Admins, Channels & Users
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002088316257'))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7523699924').split()]
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://pegab42884:pegab42884@cluster0.0fgdr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -34,9 +34,3 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "filestreamerbot")
 SHORTLINK = bool(environ.get('SHORTLINK', False)) # Set True Or False
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.io')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'hRPS5vvZc0OGOEUQJMJzPiojoVK2')
-
-API = environ.get("API", "hRPS5vvZc0OGOEUQJMJzPiojoVK2'") # shortlink api
-URL = environ.get("URL", "api.shareus.io") # shortlink domain without https://
-VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/op_hackz") # how to open link 
-BOT_USERNAME = environ.get("BOT_USERNAME", "FileStreamerBot") # bot username without @
-VERIFY = environ.get("VERIFY", "True") # set True Or False and make sure spelling is correct and first letter capital.
